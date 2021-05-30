@@ -8,7 +8,7 @@ public class LoginFrame extends JFrame implements ActionListener {
     //for box text
     public TextArea box;
     JButton b;
-    JFrame frame=new JFrame();
+    JFrame frame = new JFrame();
 
     //for add patient
     JTextField firstName;
@@ -117,7 +117,7 @@ public class LoginFrame extends JFrame implements ActionListener {
             String pwdText;
             userText = userTextField.getText();
             pwdText = passwordField.getText();
-            if ((userText.equalsIgnoreCase("salem") && pwdText.equalsIgnoreCase("12345"))||(userText.equalsIgnoreCase("ahmed") && pwdText.equalsIgnoreCase("12345"))) {
+            if ((userText.equalsIgnoreCase("salem") && pwdText.equalsIgnoreCase("12345")) || (userText.equalsIgnoreCase("ahmed") && pwdText.equalsIgnoreCase("12345"))) {
                 setVisible(false);
                 new BoxText();
 //                new addPatient();
@@ -312,8 +312,155 @@ public class LoginFrame extends JFrame implements ActionListener {
 //        f.add(comboBox1);
 //        f.setVisible(true);
 //    }
+//        JPanel panel = new JPanel(null);
+//        panel.setBorder(BorderFactory.createTitledBorder("Add Patient"));
+//        panel.setBounds(50, 30, 290, 300);
+//
+//
+//        frame1.add(panel);
+//
+//
+////        JLabel label6 = new JLabel("ID");
+////        JLabel label7 = new JLabel("Gender");
+//        comboBox = new JComboBox(new String[]{"Male", "Female"});
+//        button = new JButton("Patient Info");
+//
+//        furstnamelabel.setBounds(30, 50, 100, 25);
+//        lastnamelabel.setBounds(30, 90, 100, 25);
+//        idlabel.setBounds(30, 130, 100, 25);
+//        agelabel.setBounds(30, 170, 100, 25);
+//        Genderlabel.setBounds(30, 210, 100, 25);
+//        firstName.setBounds(120, 50, 130, 25);
+//        lastName.setBounds(120, 90, 130, 25);
+//        idNumber.setBounds(120, 130, 130, 25);
+//        age.setBounds(120, 170, 130, 25);
+//        comboBox.setBounds(120, 210, 130, 25);
+//        button.setBounds(120, 255, 130, 25);
+//
+//        panel.add(furstnamelabel);
+//        panel.add(lastnamelabel);
+//        panel.add(idlabel);
+//        panel.add(agelabel);
+//        panel.add(Genderlabel);
+//        panel.add(firstName);
+//        panel.add(lastName);
+//        panel.add(idNumber);
+//        panel.add(age);
+//        panel.add(comboBox);
+//        panel.add(button);
+//
+//        frame1.setVisible(true);
+//
+//
+//        button.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                frame1.setVisible(false);
+//                new Questions();
+//            }
+//        });
+//
+//    }
+//
+//
+//    public void Questions(){
+//
+//        JFrame frame = new JFrame("add patient");
+//        frame.setSize(400, 800);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setLayout(null);
+//
+//        JPanel panel = new JPanel(null);
+//        panel.setBorder(BorderFactory.createTitledBorder("Patient"));
+//        panel.setBounds(50, 30, 290, 600);
+//
+//        label1.setBounds(30, 50, 100, 25);
+//        label2.setBounds(30, 90, 100, 25);
+//        label3.setBounds(30, 130, 100, 25);
+//        label4.setBounds(30, 170, 100, 25);
+//        label5.setBounds(30, 210, 100, 25);
+//        label6.setBounds(30, 250, 100, 25);
+//        label7.setBounds(30, 290, 100, 25);
+//        label8.setBounds(30, 330, 100, 25);
+//        label9.setBounds(30, 370, 100, 25);
+//        label10.setBounds(30, 410, 100, 25);
+//        label11.setBounds(30, 450, 100, 25);
+//        WBC.setBounds(120, 50, 130, 25);
+//        Neut.setBounds(120, 90, 130, 25);
+//        Lymph.setBounds(120, 130, 130, 25);
+//        RBC.setBounds(120, 170, 130, 25);
+//        HCT.setBounds(120, 210, 130, 25);
+//        Urea.setBounds(120, 250, 130, 25);
+//        Hb.setBounds(120, 290, 130, 25);
+//        Creatinine.setBounds(120, 330, 130, 25);
+//        Iron.setBounds(120, 370, 130, 25);
+//        HDL.setBounds(120, 410, 130, 25);
+//        AP.setBounds(120, 450, 130, 25);
+//        button_toAddDitails.setBounds(120, 535, 130, 25);
+//
+//        panel.add(label1);
+//        panel.add(label2);
+//        panel.add(label3);
+//        panel.add(label4);
+//        panel.add(label5);
+//        panel.add(label6);
+//        panel.add(label7);
+//        panel.add(label8);
+//        panel.add(label9);
+//        panel.add(label10);
+//        panel.add(label11);
+//        panel.add(WBC);
+//        panel.add(Neut);
+//        panel.add(Lymph);
+//        panel.add(RBC);
+//        panel.add(HCT);
+//        panel.add(Urea);
+//        panel.add(Hb);
+//        panel.add(Creatinine);
+//        panel.add(Iron);
+//        panel.add(HDL);
+//        panel.add(AP);
+//        panel.add(button_toAddDitails);
+//
+//
+//        frame.add(panel);
+//        frame.setVisible(true);
+//
+//        button_toAddDitails.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                addData();
+//            }
+//        });
+//    }
+//
+//    public void addData(){
+//        str = new String[i];
+//        addName(str, firstName.getText());
+//        System.out.println(str.length);
+////        System.out.println(str.toString());
+//        comboBox1 = new JComboBox(str);
+//        comboBox1.setBounds(100, 50, 100, 20);
+//        f.setSize(400, 400);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        f.setLayout(null);
+//        f.add(comboBox1);
+//        f.setVisible(true);
+//    }
+//
+//    public void addName(String[] str, String name) {
+//        int n = str.length;
+//        String newArr[] = new String[n + 1];
+//        for (int i = 0; i < n; i++) {
+//            newArr[i] = str[i];
+//        }
+//        newArr[n] = name;
+//
+//        this.str = newArr;
+//    }
 
 }
+
 class Login {
     public static void main(String[] a) {
         LoginFrame frame = new LoginFrame();

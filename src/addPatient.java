@@ -19,7 +19,7 @@ public class addPatient implements ActionListener {
     JLabel Genderlabel = new JLabel("Gender");
     JFrame frame1 = new JFrame("Add Patient");
     JButton button;
-    JComboBox comboBox;
+    static JComboBox comboBox;
 
     addPatient() {
         startScreen();
