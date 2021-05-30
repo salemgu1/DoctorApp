@@ -150,6 +150,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        frame.setLayout(new FlowLayout());
 //        frame.add(box);
+
 //        b=new JButton("add patient");
 //        b.setBounds(200,1000,40,20);
 //        frame.add(b);
