@@ -93,7 +93,6 @@ public class addData {
         int htc = Integer.parseInt(Questions.HCT.getText());
         if((addPatient.comboBox.getSelectedItem()=="Male")&&)
         {
-
         }
     }
 
