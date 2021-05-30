@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Arrays;
 //import addPatient;
 
 public class addData {
@@ -12,16 +13,15 @@ public class addData {
     addData() {
         str = new String[i];
         addName(str, addPatient.firstName.getText());
-//        System.out.println(str.toString());
+//        System.out.println(Arrays.stream(str).toArray());
         comboBox1 = new JComboBox(str);
         comboBox1.setBounds(100, 50, 100, 20);
+        BoxText.box.setText(checkWBC());
         f.setSize(400, 400);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
         f.add(comboBox1);
         f.setVisible(true);
-
-
     }
 
 
