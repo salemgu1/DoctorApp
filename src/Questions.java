@@ -94,6 +94,7 @@ public class Questions {
         button_toAddDitails.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
                 new addData();
             }
         });

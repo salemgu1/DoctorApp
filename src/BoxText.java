@@ -41,6 +41,7 @@ public class BoxText extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==b)
         {
+            frame.setVisible(false);
             new addPatient();
         }
     }

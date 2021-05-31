@@ -1,27 +1,45 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Arrays;
 //import addPatient;
 
-public class addData {
+public class addData{
 
     JFrame f = new JFrame();
     static JComboBox comboBox1;
     static String[] str;
     static int i = 1;
+    JButton button;
 
 
     addData() {
+        button=new JButton("Show details");
         str = new String[i];
         addName(str, addPatient.firstName.getText());
 //        System.out.println(Arrays.stream(str).toArray());
         comboBox1 = new JComboBox(str);
         comboBox1.setBounds(100, 50, 100, 20);
-        BoxText.box.setText(checkWBC());
+        button.setBounds(100, 300, 100, 20);
+//        BoxText.box.setText(checkWBC());
         f.setSize(400, 400);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
         f.add(comboBox1);
+        f.add(button);
         f.setVisible(true);
+
+
+
+
+
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                f.setVisible(false);
+                BoxText.box.setText(checkWBC());
+            }
+        });
     }
 
 
