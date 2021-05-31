@@ -26,9 +26,6 @@ public class BoxText extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new addPatient();
-//                addPatient a=new addPatient();
-//                System.out.println((new addPatient()).field1.getText());
-//                System.out.println(box.getText());
 
             }
         });

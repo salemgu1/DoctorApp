@@ -3,8 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginFrame extends JFrame implements ActionListener {
-
+public class DoctorApp extends JFrame implements ActionListener {
     // for login frame
     Container container = getContentPane();
     JLabel userLabel = new JLabel("USERNAME");
@@ -15,18 +14,11 @@ public class LoginFrame extends JFrame implements ActionListener {
     JPasswordField passwordField = new JPasswordField();
     JButton loginButton = new JButton("LOGIN");
     JButton resetButton = new JButton("RESET");
-    //    JButton b=new JButton("ss");
     JCheckBox showPassword = new JCheckBox("Show Password");
-//    JFrame f;
-
-    // add data
-    JFrame f = new JFrame();
-    JComboBox comboBox1;
-    String[] str;
-    static int i = 0;
 
 
-    LoginFrame() {
+
+    DoctorApp() {
         setLayoutManager();
         setLocationAndSize();
         addComponentsToContainer();
@@ -47,7 +39,6 @@ public class LoginFrame extends JFrame implements ActionListener {
         showPassword.setBounds(150, 250, 150, 30);
         loginButton.setBounds(50, 370, 100, 30);
         resetButton.setBounds(200, 370, 100, 30);
-
 
     }
 
@@ -90,7 +81,6 @@ public class LoginFrame extends JFrame implements ActionListener {
             if ((userText.equalsIgnoreCase(User1)&&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1||pas1.indexOf("#")!=-1||pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID1))||(userText.equalsIgnoreCase(User2) &&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1&&pas1.indexOf("#")!=-1&&pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID2))) {
                 setVisible(false);
                 new BoxText();
-//                new addPatient();
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid Username or Password");
             }
@@ -135,7 +125,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 }
 class Login {
     public static void main(String[] a) {
-        LoginFrame frame = new LoginFrame();
+        DoctorApp frame = new DoctorApp();
         frame.setTitle("Login Form");
         frame.setVisible(true);
         frame.setBounds(0, 0, 1500, 1000);

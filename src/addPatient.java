@@ -37,9 +37,6 @@ public class addPatient implements ActionListener {
 
         frame1.add(panel);
 
-
-//        JLabel label6 = new JLabel("ID");
-//        JLabel label7 = new JLabel("Gender");
         comboBox = new JComboBox(new String[]{"Male", "Female"});
         button = new JButton("Patient Info");
 
@@ -79,10 +76,6 @@ public class addPatient implements ActionListener {
         });
 
     }
-
-//    public JTextField getField1() {
-//        return field1;
-//    }
 
 
     @Override

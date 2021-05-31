@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
-//import addPatient;
+
 
 public class addData{
 
@@ -17,11 +16,9 @@ public class addData{
         button=new JButton("Show details");
         str = new String[i];
         addName(str, addPatient.firstName.getText());
-//        System.out.println(Arrays.stream(str).toArray());
         comboBox1 = new JComboBox(str);
         comboBox1.setBounds(100, 50, 100, 20);
         button.setBounds(100, 300, 100, 20);
-//        BoxText.box.setText(checkWBC());
         f.setSize(400, 400);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
