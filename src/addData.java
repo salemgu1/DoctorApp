@@ -53,25 +53,25 @@ public class addData{
 
     public String checkWBC() {
         if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) > 4500 && Integer.parseInt(Questions.WBC.getText()) < 1100) {
-            return "Normal WBC";
+            return "Normal WBC\n";
         } else if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) < 4500) {
-            return "Indicate viral disease, immune system failure and in very rare cases cancer";
+            return "Indicate viral disease, immune system failure and in very rare cases cancer\n";
         }
         if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) > 1100) {
-            return "Most often indicate the presence of an infection, if there is a fever. In other, extremely rare cases, very high values may indicate blood disease or cancer.";
+            return "Most often indicate the presence of an infection, if there is a fever. In other, extremely rare cases, very high values may indicate blood disease or cancer.\n";
         }
         return " ";
     }
 
     //The amount of white blood cells that are primarily responsible for eliminating the bacteria.
-    // The amount of white blood cells that are primarily responsible for eliminating the bacteria.
+
     public String checkNeut() {
         int wbc = Integer.parseInt(Questions.WBC.getText());
         int neut = Integer.parseInt(Questions.Neut.getText());
         if (neut > wbc * 0.28 && neut < wbc * 0.54) {
-            return "Normal Neut";
+            return "Normal Neut\n";
         } else if (neut > wbc * 0.54) {
-            return "Most often indicate a bacterial infection";
+            return "Most often indicate a bacterial infection\n";
         } else
             return "Indicate a disorder in the formation of blood, a tendency to bacterial infections and in rare cases - a process\n" +
                     "Cancer";
@@ -82,9 +82,9 @@ public class addData{
         int neut = Integer.parseInt(Questions.Neut.getText());
         int lymph = Integer.parseInt(Questions.Lymph.getText());
         if (lymph > neut * 0.36 && neut < lymph * 0.52) {
-            return "Normal Lymph";
+            return "Normal Lymph\n";
         } else if (lymph > neut * 0.52) {
-            return "May indicate a prolonged bacterial infection or lymphoma cancer";
+            return "May indicate a prolonged bacterial infection or lymphoma cancer\n";
         } else
             return "Indicate a disorder in the formation of blood, a tendency to bacterial infections and in rare cases - a process\n" +
                     "Cancer";
@@ -97,41 +97,42 @@ public class addData{
     public String checkRBC() {
         int rbc = Integer.parseInt(Questions.RBC.getText());
         if (rbc > 4.5 && rbc < 6)
-            return "Normal Lymph";
+            return "Normal Lymph\n";
         else if (rbc < 4.5)
-            return "May indicate anemia or severe bleeding";
+            return "May indicate anemia or severe bleeding\n";
         else
-            return "May indicate a disturbance in the blood production system. High levels were also observed in smokers and in patients In lung diseases.";
+            return "May indicate a disturbance in the blood production system. High levels were also observed in smokers and in patients In lung diseases.\n";
     }
     //The volume of red blood cells within the whole blood fluid
     public String checkHCT() {
         int htc = Integer.parseInt(Questions.HCT.getText());
-        if((addPatient.comboBox.getSelectedItem()=="Male")&&)
+        if((addPatient.comboBox.getSelectedItem()=="Male"))
         {
         }
+        return "";
     }
-
-    public String checkUrea() {
-
-    }
-
-    public String checkHb() {
-
-    }
-
-    public String checkIron() {
-
-    }
-
-
-    public String checkHDL() {
-
-    }
-
-
-    public String checkAlkaline_Phosphatase() {
-
-    }
+//
+//    public String checkUrea() {
+//
+//    }
+//
+//    public String checkHb() {
+//
+//    }
+//
+//    public String checkIron() {
+//
+//    }
+//
+//
+//    public String checkHDL() {
+//
+//    }
+//
+//
+//    public String checkAlkaline_Phosphatase() {
+//
+//    }
 
 
 }

@@ -19,7 +19,7 @@ public class Questions {
     JLabel label2 = new JLabel("Neut");
     JLabel label3 = new JLabel("Lymph");
     JLabel label4 = new JLabel("RBC");
-    JLabel label5 = new JLabel("HCT");
+    JLabel label5 = new JLabel("HCT(%)");
     JLabel label6 = new JLabel("Urea");
     JLabel label7 = new JLabel("Hb");
     JLabel label8 = new JLabel("Creatinine");
