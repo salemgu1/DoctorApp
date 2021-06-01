@@ -34,7 +34,7 @@ public class addData{
             @Override
             public void actionPerformed(ActionEvent e) {
                 f.setVisible(false);
-                BoxText.box.setText(checkWBC());
+                BoxText.box.setText(checkWBC()+checkHCT()+checkNeut()+checkLymph()+checkRBC()+checkHCT()+checkUrea()+checkHb()+checkCreatinine()+checkIron()+checkHDL()+checkAlkaline_Phosphatase());
             }
         });
     }
@@ -106,13 +106,14 @@ public class addData{
     //The volume of red blood cells within the whole blood fluid
     public String checkHCT() {
         int htc = Integer.parseInt(Questions.HCT.getText());
-        if((addPatient.comboBox.getSelectedItem()=="Male")&&)
+        if((addPatient.comboBox.getSelectedItem()=="Male"))
         {
         }
+        return "";
     }
 
     public String checkUrea() {
-
+        return "";
     }
 
     //Hemoglobin is a component inside the red blood cell, which is responsible for the binding and release of oxygen and carbon dioxide Oxygen
@@ -159,7 +160,7 @@ public class addData{
     }
 
     public String checkAlkaline_Phosphatase() {
-
+        return "";
     }
 
 
