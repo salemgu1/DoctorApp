@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class addData{
+public class addData {
 
     JFrame f = new JFrame();
     static JComboBox comboBox1;
@@ -13,7 +13,7 @@ public class addData{
 
 
     addData() {
-        button=new JButton("Show details");
+        button = new JButton("Show details");
         str = new String[i];
         addName(str, addPatient.firstName.getText());
         comboBox1 = new JComboBox(str);
@@ -25,9 +25,6 @@ public class addData{
         f.add(comboBox1);
         f.add(button);
         f.setVisible(true);
-
-
-
 
 
         button.addActionListener(new ActionListener() {
@@ -55,10 +52,10 @@ public class addData{
         if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) > 4500 && Integer.parseInt(Questions.WBC.getText()) < 1100) {
             return "Normal WBC";
         } else if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) < 4500) {
-            return "Indicate viral disease, immune system failure and in very rare cases cancer";
+            return "Indicate viral disease, immune system failure and in very rare cases cancer\n";
         }
         if (Integer.parseInt(addPatient.age.getText()) > 18 && Integer.parseInt(Questions.WBC.getText()) > 1100) {
-            return "Most often indicate the presence of an infection, if there is a fever. In other, extremely rare cases, very high values may indicate blood disease or cancer.";
+            return "Most often indicate the presence of an infection, if there is a fever. In other, extremely rare cases, very high values may indicate blood disease or cancer.\n";
         }
         return " ";
     }
@@ -69,9 +66,9 @@ public class addData{
         int wbc = Integer.parseInt(Questions.WBC.getText());
         int neut = Integer.parseInt(Questions.Neut.getText());
         if (neut > wbc * 0.28 && neut < wbc * 0.54) {
-            return "Normal Neut";
+            return "Normal Neut\n";
         } else if (neut > wbc * 0.54) {
-            return "Most often indicate a bacterial infection";
+            return "Most often indicate a bacterial infection\n";
         } else
             return "Indicate a disorder in the formation of blood, a tendency to bacterial infections and in rare cases - a process\n" +
                     "Cancer";
@@ -82,9 +79,9 @@ public class addData{
         int neut = Integer.parseInt(Questions.Neut.getText());
         int lymph = Integer.parseInt(Questions.Lymph.getText());
         if (lymph > neut * 0.36 && neut < lymph * 0.52) {
-            return "Normal Lymph";
+            return "Normal Lymph\n";
         } else if (lymph > neut * 0.52) {
-            return "May indicate a prolonged bacterial infection or lymphoma cancer";
+            return "May indicate a prolonged bacterial infection or lymphoma cancer\n";
         } else
             return "Indicate a disorder in the formation of blood, a tendency to bacterial infections and in rare cases - a process\n" +
                     "Cancer";
@@ -97,23 +94,33 @@ public class addData{
     public String checkRBC() {
         int rbc = Integer.parseInt(Questions.RBC.getText());
         if (rbc > 4.5 && rbc < 6)
-            return "Normal Lymph";
+            return "Normal RBC\n";
         else if (rbc < 4.5)
-            return "May indicate anemia or severe bleeding";
+            return "May indicate anemia or severe bleeding\n";
         else
-            return "May indicate a disturbance in the blood production system. High levels were also observed in smokers and in patients In lung diseases.";
-    }
-    //The volume of red blood cells within the whole blood fluid
-    public String checkHCT() {
-        int htc = Integer.parseInt(Questions.HCT.getText());
-        if((addPatient.comboBox.getSelectedItem()=="Male"))
-        {
-        }
-        return "";
+            return "May indicate a disturbance in the blood production system. High levels were also observed in smokers and in patients In lung diseases.\n";
     }
 
+    //The volume of red blood cells within the whole blood fluid
+    public String checkHCT() {
+        int hct = Integer.parseInt(Questions.HCT.getText());
+        if (((addPatient.comboBox.getSelectedItem() == "Male") && hct >= 37 && hct <= 54) || (addPatient.comboBox.getSelectedItem() == "Female" && hct >= 33 && hct <= 47)) {
+            return "Normal HCT\n";
+        } else if (((addPatient.comboBox.getSelectedItem() == "Male") && hct > 54) || (addPatient.comboBox.getSelectedItem() == "Female" && hct > 47)) {
+            return "Common in smokers\n";
+        } else
+            return "Most often indicate bleeding or anemia\n";
+    }
+
+    //The level of urination in the blood. Urine is the end product of the metabolic process of proteins in the body.
     public String checkUrea() {
-        return "";
+        int urea = Integer.parseInt(Questions.Urea.getText());
+        if (urea >= 17 && urea <= 43) {
+            return "Normal Urea\n";
+        } else if (urea > 43) {
+            return "May indicate kidney disease, dehydration or a high protein diet\n";
+        } else
+            return "Malnutrition,low-protein diet or liver disease. It should be noted that during pregnancy the level of urination decreases\n";
     }
 
     //Hemoglobin is a component inside the red blood cell, which is responsible for the binding and release of oxygen and carbon dioxide Oxygen
@@ -121,9 +128,9 @@ public class addData{
         int hb = Integer.parseInt(Questions.Hb.getText());
         int age = Integer.parseInt(addPatient.age.getText());
         if (((addPatient.comboBox.getSelectedItem() == "Male") && hb >= 12 && hb <= 18) || (addPatient.comboBox.getSelectedItem() == "Female" && hb >= 12 && hb <= 16) || (age >= 0 && age <= 17 && hb >= 11.5 && hb <= 15.5))
-            return "Normal Hb";
+            return "Normal Hb\n";
         else
-            return "Indicates anemia. This can be due to hematological disorder, iron deficiency and bleeding";
+            return "Indicates anemia. This can be due to hematological disorder, iron deficiency and bleeding\n";
     }
 
     //A breakdown product of an ingredient produced in the body and found in a muscle called "creatinine phosphate". Creatinine testing is extremely important direction That it gives a criterion regarding kidney function
@@ -141,27 +148,34 @@ public class addData{
     public String checkIron() {
         int iron = Integer.parseInt(Questions.Iron.getText());
         if ((addPatient.comboBox.getSelectedItem() == "Male" && iron >= 60 && iron <= 160)) {
-            return "Normal Iron";
+            return "Normal Iron\n";
         } else if (iron > 160) {
-            return "May indicate iron poisoning.";
+            return "May indicate iron poisoning.\n";
         } else
             return "Usually indicates an inadequate diet or an increase in the need for iron (for example during pregnancy) or blood loss\n" +
                     "Following bleeding.";
     }
-
+    //DL, also called 'good cholesterol', is a protein-like molecule that carries cholesterol from the body's cells to the liver.
+    //There is a breakdown of cholesterol. In this way, HDL helps the body get rid of excess fat.
     public String checkHDL() {
         int hdl = Integer.parseInt(Questions.HDL.getText());
         if ((addPatient.comboBox.getSelectedItem() == "Male" && hdl >= 29 && hdl <= 62) || (addPatient.comboBox.getSelectedItem() == "Female" && hdl >= 34 && hdl <= 82)) {
             return "Normal HDL";
         } else if ((addPatient.comboBox.getSelectedItem() == "Male" && hdl > 62) || (addPatient.comboBox.getSelectedItem() == "Female" && hdl > 82)) {
-            return "Are usually harmless. Exercise raises \"good\" cholesterol levels.";
+            return "Are usually harmless. Exercise raises \"good\" cholesterol levels.\n";
         } else
-            return "May indicate risk of heart disease, hyperlipidemia (hyperlipidemia) or adult-onset diabetes";
+            return "May indicate risk of heart disease, hyperlipidemia (hyperlipidemia) or adult-onset diabetes\n";
     }
-
+    //
     public String checkAlkaline_Phosphatase() {
-        return "";
+        int ap = Integer.parseInt(Questions.AP.getText());
+        if (addPatient.mizrahi.getSelectedItem() == "mizrahi" && ap >= 60 && ap <= 120 || addPatient.mizrahi.getSelectedItem() != "mizrahi" && ap >= 30 && ap <= 90) {
+            return "checkAlkaline_Phosphatase\n";
+        }
+        if (addPatient.mizrahi.getSelectedItem() == "mizrahi" && ap > 120 || addPatient.mizrahi.getSelectedItem() != "mizrahi" && ap > 90) {
+            return "May indicate liver disease, biliary tract disease, pregnancy, hypothyroidism or Use of various medications.\n";
+        } else
+            return "May indicate a poor diet that lacks protein. Deficiency in vitamins like vitamin, vitamin B12, Vitamin B6, folic acid\n.";
+
     }
-
-
 }
