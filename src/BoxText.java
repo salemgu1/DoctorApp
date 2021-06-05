@@ -7,22 +7,19 @@ import java.io.*;
 public class BoxText extends JFrame implements ActionListener {
     public static TextArea box;
     JButton b;
-    public static JButton bot;
     public JFrame frame=new JFrame();
-    JButton button;
-    JComboBox comboBox;
 
     BoxText(){
-        frame.setSize(1200,500);
+        setSize(1200,500);
         box=new TextArea();
-        box.setBounds(113, 44, 226, 96);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new FlowLayout());
-        frame.add(box);
+        box.setBounds(0, 44, 226, 96);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        add(box);
         b=new JButton("add patient");
         b.setBounds(200,1000,40,20);
-        frame.add(b);
-        frame.setVisible(true);
+        add(b);
+        setVisible(true);
         b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,7 +44,4 @@ public class BoxText extends JFrame implements ActionListener {
     }
 
 
-    public static void main(String args[]){
-        new BoxText();
-    }
 }

@@ -1,15 +1,19 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 public class DoctorApp extends JFrame implements ActionListener {
     // for login frame
     Container container = getContentPane();
-    JLabel userLabel = new JLabel("USERNAME");
+     JLabel userLabel = new JLabel("USERNAME");
     JLabel passwordLabel = new JLabel("PASSWORD");
     JLabel idLabel = new JLabel("ID");
-    public JTextField userTextField = new JTextField();
+    JLabel background;
+    public static JTextField userTextField = new JTextField();
     public JTextField idTextField = new JTextField();
     JPasswordField passwordField = new JPasswordField();
     JButton loginButton = new JButton("LOGIN");
@@ -22,7 +26,11 @@ public class DoctorApp extends JFrame implements ActionListener {
         setLayoutManager();
         setLocationAndSize();
         addComponentsToContainer();
+
+
         addActionEvent();
+
+
     }
 
     public void setLayoutManager() {
@@ -43,21 +51,30 @@ public class DoctorApp extends JFrame implements ActionListener {
     }
 
     public void addComponentsToContainer() {
-        container.add(userLabel);
-        container.add(passwordLabel);
-        container.add(userTextField);
-        container.add(passwordField);
-        container.add(showPassword);
-        container.add(loginButton);
-        container.add(resetButton);
-        container.add(idLabel);
-        container.add(idTextField);
+
+        JPanel panel = new JPanel(null);
+//        panel.setBackground(Color.BLUE);
+        panel.setBorder(BorderFactory.createTitledBorder("Sign in Doctor"));
+        panel.setBounds(50, 50, 600, 600);
+
+
+        panel.add(userLabel);
+        panel.add(passwordLabel);
+        panel.add(userTextField);
+        panel.add(passwordField);
+        panel.add(showPassword);
+        panel.add(loginButton);
+        panel.add(resetButton);
+        panel.add(idLabel);
+        panel.add(idTextField);
+        container.add(panel);
     }
 
     public void addActionEvent() {
         loginButton.addActionListener(this);
         resetButton.addActionListener(this);
         showPassword.addActionListener(this);
+
     }
 
 
@@ -133,3 +150,7 @@ class Login {
         frame.setResizable(false);
     }
 }
+
+
+
+

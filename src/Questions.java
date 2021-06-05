@@ -31,37 +31,40 @@ public class Questions {
     Questions(){
 
         JFrame frame = new JFrame("add patient");
-        frame.setSize(400, 800);
+        frame.setSize(600, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
+        JLabel l=new JLabel("Hello Doctor "+DoctorApp.userTextField.getText()+" Please Enter Tests for the patient "+addPatient.firstName.getText());
+        l.setBounds(10,30,500,30);
+
         JPanel panel = new JPanel(null);
         panel.setBorder(BorderFactory.createTitledBorder("Patient"));
-        panel.setBounds(50, 30, 290, 600);
+        panel.setBounds(50, 30, 500, 600);
 
-        label1.setBounds(30, 50, 100, 25);
-        label2.setBounds(30, 90, 100, 25);
-        label3.setBounds(30, 130, 100, 25);
-        label4.setBounds(30, 170, 100, 25);
-        label5.setBounds(30, 210, 100, 25);
-        label6.setBounds(30, 250, 100, 25);
-        label7.setBounds(30, 290, 100, 25);
-        label8.setBounds(30, 330, 100, 25);
-        label9.setBounds(30, 370, 100, 25);
-        label10.setBounds(30, 410, 100, 25);
-        label11.setBounds(30, 450, 100, 25);
-        WBC.setBounds(120, 50, 130, 25);
-        Neut.setBounds(120, 90, 130, 25);
-        Lymph.setBounds(120, 130, 130, 25);
-        RBC.setBounds(120, 170, 130, 25);
-        HCT.setBounds(120, 210, 130, 25);
-        Urea.setBounds(120, 250, 130, 25);
-        Hb.setBounds(120, 290, 130, 25);
-        Creatinine.setBounds(120, 330, 130, 25);
-        Iron.setBounds(120, 370, 130, 25);
-        HDL.setBounds(120, 410, 130, 25);
-        AP.setBounds(120, 450, 130, 25);
-        button_toAddDitails.setBounds(120, 535, 130, 25);
+        label1.setBounds(30, 80, 100, 25);
+        label2.setBounds(30, 120, 100, 25);
+        label3.setBounds(30, 160, 100, 25);
+        label4.setBounds(30, 200, 100, 25);
+        label5.setBounds(30, 240, 100, 25);
+        label6.setBounds(30, 280, 100, 25);
+        label7.setBounds(30, 320, 100, 25);
+        label8.setBounds(30, 360, 100, 25);
+        label9.setBounds(30, 400, 100, 25);
+        label10.setBounds(30, 440, 100, 25);
+        label11.setBounds(30, 480, 100, 25);
+        WBC.setBounds(120, 80, 130, 25);
+        Neut.setBounds(120, 120, 130, 25);
+        Lymph.setBounds(120, 160, 130, 25);
+        RBC.setBounds(120, 200, 130, 25);
+        HCT.setBounds(120, 240, 130, 25);
+        Urea.setBounds(120, 280, 130, 25);
+        Hb.setBounds(120, 320, 130, 25);
+        Creatinine.setBounds(120, 360, 130, 25);
+        Iron.setBounds(120, 400, 130, 25);
+        HDL.setBounds(120, 440, 130, 25);
+        AP.setBounds(120, 480, 130, 25);
+        button_toAddDitails.setBounds(120, 565, 130, 25);
 
         panel.add(label1);
         panel.add(label2);
@@ -86,6 +89,7 @@ public class Questions {
         panel.add(HDL);
         panel.add(AP);
         panel.add(button_toAddDitails);
+        panel.add(l);
 
 
         frame.add(panel);
@@ -99,4 +103,5 @@ public class Questions {
             }
         });
     }
+
 }
