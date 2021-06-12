@@ -95,10 +95,18 @@ public class DoctorApp extends JFrame implements ActionListener {
             int charpas=countChars(pas1);
             String ID1="221133";
             String ID2="221122";
-            if ((userText.equalsIgnoreCase(User1)&&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1||pas1.indexOf("#")!=-1||pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID1))||(userText.equalsIgnoreCase(User2) &&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1&&pas1.indexOf("#")!=-1&&pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID2))) {
+
+            //((userText.equalsIgnoreCase(User2) &&digUser2<=2&&User2.length()>=6&&User2.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1&&pas1.indexOf("#")!=-1&&pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID2)))
+            if (((userText.equalsIgnoreCase(User1)&&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&(pas1.indexOf("!")!=-1||pas1.indexOf("#")!=-1||pas1.indexOf("$")!=-1)&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID1)))) {
                 setVisible(false);
                 new BoxText();
-            } else {
+            }
+            else if (((userText.equalsIgnoreCase(User2)&&digUser2<=2&&User2.length()>=6&&User2.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&(pas1.indexOf("!")!=-1||pas1.indexOf("#")!=-1||pas1.indexOf("$")!=-1)&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID2))))
+            {
+                setVisible(false);
+                new BoxText();
+            }
+            else {
                 JOptionPane.showMessageDialog(this, "Invalid Username or Password");
             }
 
@@ -138,7 +146,6 @@ public class DoctorApp extends JFrame implements ActionListener {
         }
         return count;
     }
-
 }
 class Login {
     public static void main(String[] a) {
