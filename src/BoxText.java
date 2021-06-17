@@ -14,13 +14,14 @@ public class BoxText extends JFrame implements ActionListener {
     BoxText(){
         image1 = new ImageIcon(getClass().getResource("2.jpg"));
         la = new JLabel(image1);
-        la.setBounds(40,250,400,400);
+
         setSize(1200,500);
         box=new TextArea();
         box.setBounds(0, 44, 226, 96);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
         add(box);
+        la.setBounds(40,250,400,400);
         add(la);
         b=new JButton("add patient");
         b.setBounds(200,1000,40,20);
@@ -48,10 +49,5 @@ public class BoxText extends JFrame implements ActionListener {
             new addPatient();
         }
     }
-
-    public static void main(String args[]){
-        new BoxText();
-    }
-
 
 }
