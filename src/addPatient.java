@@ -4,9 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class addPatient extends JPanel implements ActionListener {
-    JButton b;
-    TextArea box;
-    JLabel label;
     static JTextField firstName = new JTextField();
     static JTextField lastName = new JTextField();
     static JTextField idNumber = new JTextField();
@@ -32,7 +29,6 @@ public class addPatient extends JPanel implements ActionListener {
     static JComboBox Smoke;
     static JComboBox Fever;
     static JComboBox LungDiseases;
-    static JComboBox BodyImmunity;
 
     addPatient() {
         startScreen();

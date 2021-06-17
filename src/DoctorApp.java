@@ -21,7 +21,7 @@ public class DoctorApp extends JFrame implements ActionListener {
     JButton loginButton = new JButton("LOGIN");
     JButton resetButton = new JButton("RESET");
     JCheckBox showPassword = new JCheckBox("Show Password");
-    private Icon icon = new ImageIcon("2.jpeg");
+    private Icon icon = new ImageIcon("2.jpg");
 
 
 
@@ -43,7 +43,7 @@ public class DoctorApp extends JFrame implements ActionListener {
     public void setLocationAndSize() {
         image1 = new ImageIcon(getClass().getResource("1.jpg"));
         la = new JLabel(image1);
-        la.setBounds(650,30,500,500);
+        la.setBounds(650,60,700,550);
         lab.setForeground(Color.BLUE);
         lab.setBounds(30,90,600,30);
         userLabel.setBounds(50, 150, 100, 30);
