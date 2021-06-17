@@ -42,8 +42,11 @@ public class DoctorApp extends JFrame implements ActionListener {
         lab.setForeground(Color.BLUE);
         lab.setBounds(30,90,600,30);
         userLabel.setBounds(50, 150, 100, 30);
+        userLabel.setForeground(new Color(153,0,153));
         passwordLabel.setBounds(50, 220, 100, 30);
+        passwordLabel.setForeground(new Color(153,0,153));
         idLabel.setBounds(50, 290, 100, 30);
+        idLabel.setForeground(new Color(153,0,153));
         idTextField.setBounds(150, 290, 150, 30);
         userTextField.setBounds(150, 150, 150, 30);
         passwordField.setBounds(150, 220, 150, 30);

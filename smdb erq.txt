@@ -1,0 +1,43 @@
+Patient name: smdb erq ID: 214 age: 12
+WBC:
+
+ Indicate viral disease, immune system failure and in very rare cases cancer
+HCT:
+
+ Most often indicate bleeding or anemia
+ Neut:
+
+ Indicate a disorder in the formation of blood, a tendency to bacterial infections and in rare cases - a process Cancer
+ Therapy is 10 mg pill of B12 a day for a month, 5 mg pill of folic acid a day for a month
+Lymph:
+
+ May indicate a prolonged bacterial infection or lymphoma cancer
+ Therapy is Dedicated antibiotics, Entrectinib
+RBC:
+
+ May indicate anemia or severe bleeding
+ Therapy is Two 10 mg B12 pills a day for a month ,Urgently evacuate to the hospital
+HCT:
+
+ Most often indicate bleeding or anemia
+ Urea:
+
+ Malnutrition,low-protein diet or liver disease. It should be noted that during pregnancy the level of urination decreases
+KHb:
+
+ Indicates anemia. This can be due to hematological disorder, iron deficiency and bleeding
+ Therapy is Two 10 mg pills of B12 a day for a month, to be urgently evacuated to the hospital
+Creatinine:
+
+ Are most commonly seen in patients with very poor muscle mass and malnourished people who do not consume enough proteinIron:
+
+ Usually indicates an inadequate diet or an increase in the need for iron (for example during pregnancy) or blood loss Following bleeding.
+Schedule an appointment with a nutritionist, evacuate to the hospital 
+HDL:
+
+ May indicate risk of heart disease, hyperlipidemia (hyperlipidemia) or adult-onset diabetes
+To schedule an appointment with a nutritionist, to schedule an appointment with a nutritionist, 5 mg of Simobil pill per day for a week, adjusting insulin for the patient
+Alkaline Phosphatase:
+
+ May indicate a poor diet that lacks protein. Deficiency in vitamins like vitamin, vitamin B12, Vitamin B6, folic acid
+.

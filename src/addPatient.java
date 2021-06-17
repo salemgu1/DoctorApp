@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.InputStream;
 
 public class addPatient extends JPanel implements ActionListener {
     JButton b;
@@ -13,7 +12,8 @@ public class addPatient extends JPanel implements ActionListener {
     static JTextField idNumber = new JTextField();
     static JTextField age = new JTextField();
 
-    JLabel furstnamelabel = new JLabel("First Name");
+    JLabel firstnamelabel = new JLabel("First Name");
+
     JLabel lastnamelabel = new JLabel("Last Name");
     JLabel idlabel = new JLabel("ID Number");
     JLabel agelabel = new JLabel("Age");
@@ -63,16 +63,26 @@ public class addPatient extends JPanel implements ActionListener {
 
         button = new JButton("Patient Info");
 
-        furstnamelabel.setBounds(30, 80, 100, 25);
+        firstnamelabel.setBounds(30, 80, 100, 25);
+        firstnamelabel.setForeground(new Color(153,0,153));
         lastnamelabel.setBounds(30, 120, 100, 25);
+        lastnamelabel.setForeground(new Color(153,0,153));
         idlabel.setBounds(30, 160, 100, 25);
+        idlabel.setForeground(new Color(153,0,153));
         agelabel.setBounds(30, 200, 100, 25);
+        agelabel.setForeground(new Color(153,0,153));
         Genderlabel.setBounds(30, 240, 100, 25);
+        Genderlabel.setForeground(new Color(153,0,153));
         pregnantlabel.setBounds(30, 280, 100, 25);
+        pregnantlabel.setForeground(new Color(153,0,153));
         mizrahilabel.setBounds(30, 320, 100, 25);
+        mizrahilabel.setForeground(new Color(153,0,153));
         Feverlabel.setBounds(30, 400, 100, 25);
+        Feverlabel.setForeground(new Color(153,0,153));
         LungDiseaseslabel.setBounds(30, 440, 100, 25);
+        LungDiseaseslabel.setForeground(new Color(153,0,153));
         smoker.setBounds(30, 360, 100, 25);
+        smoker.setForeground(new Color(153,0,153));
         firstName.setBounds(120, 80, 130, 25);
         lastName.setBounds(120, 120, 130, 25);
         idNumber.setBounds(120, 160, 130, 25);
@@ -87,7 +97,7 @@ public class addPatient extends JPanel implements ActionListener {
 
         button.setBounds(120, 755, 130, 25);
 
-        panel.add(furstnamelabel);
+        panel.add(firstnamelabel);
         panel.add(lastnamelabel);
         panel.add(idlabel);
         panel.add(agelabel);
