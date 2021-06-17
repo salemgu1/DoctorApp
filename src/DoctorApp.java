@@ -6,7 +6,9 @@ import java.awt.event.ActionListener;
 public class DoctorApp extends JFrame implements ActionListener {
     // for login frame
     Container container = getContentPane();
+    private ImageIcon image1;
     JPanel pane =new JPanel();
+    JLabel la;
     JPanel pane1=new JPanel();
      JLabel lab = new JLabel("Welcome to our software that offers the treatment Best suited for the patient!");
      JLabel userLabel = new JLabel("USERNAME");
@@ -39,6 +41,9 @@ public class DoctorApp extends JFrame implements ActionListener {
     }
 
     public void setLocationAndSize() {
+        image1 = new ImageIcon(getClass().getResource("1.jpg"));
+        la = new JLabel(image1);
+        la.setBounds(650,30,500,500);
         lab.setForeground(Color.BLUE);
         lab.setBounds(30,90,600,30);
         userLabel.setBounds(50, 150, 100, 30);
@@ -78,6 +83,7 @@ public class DoctorApp extends JFrame implements ActionListener {
         panel.add(resetButton);
         panel.add(idLabel);
         panel.add(idTextField);
+        container.add(la);
         container.add(panel);
         container.add(pane);
     }
