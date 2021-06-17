@@ -17,8 +17,8 @@ public class Questions {
     static JTextField HDL = new JTextField();
     static JTextField AP = new JTextField();
     JLabel label1 = new JLabel("WBC");
-    JLabel label2 = new JLabel("Neut");
-    JLabel label3 = new JLabel("Lymph");
+    JLabel label2 = new JLabel("Neut(%)");
+    JLabel label3 = new JLabel("Lymph(%)");
     JLabel label4 = new JLabel("RBC");
     JLabel label5 = new JLabel("HCT(%)");
     JLabel label6 = new JLabel("Urea");
