@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -36,23 +37,36 @@ public class Questions {
         frame.setLayout(null);
 
         JLabel l=new JLabel("Hello Doctor "+DoctorApp.userTextField.getText()+" Please Enter Tests for the patient "+addPatient.firstName.getText());
+        l.setForeground(Color.BLUE);
         l.setBounds(10,30,500,30);
 
         JPanel panel = new JPanel(null);
         panel.setBorder(BorderFactory.createTitledBorder("Patient"));
+        panel.setBackground(Color.lightGray);
         panel.setBounds(50, 30, 500, 600);
 
         label1.setBounds(30, 80, 100, 25);
+        label1.setForeground(new Color(153,0,153));
         label2.setBounds(30, 120, 100, 25);
+        label2.setForeground(new Color(153,0,153));
         label3.setBounds(30, 160, 100, 25);
+        label3.setForeground(new Color(153,0,153));
         label4.setBounds(30, 200, 100, 25);
+        label4.setForeground(new Color(153,0,153));
         label5.setBounds(30, 240, 100, 25);
+        label5.setForeground(new Color(153,0,153));
         label6.setBounds(30, 280, 100, 25);
+        label6.setForeground(new Color(153,0,153));
         label7.setBounds(30, 320, 100, 25);
+        label7.setForeground(new Color(153,0,153));
         label8.setBounds(30, 360, 100, 25);
+        label8.setForeground(new Color(153,0,153));
         label9.setBounds(30, 400, 100, 25);
+        label9.setForeground(new Color(153,0,153));
         label10.setBounds(30, 440, 100, 25);
+        label10.setForeground(new Color(153,0,153));
         label11.setBounds(30, 480, 100, 25);
+        label11.setForeground(new Color(153,0,153));
         WBC.setBounds(120, 80, 130, 25);
         Neut.setBounds(120, 120, 130, 25);
         Lymph.setBounds(120, 160, 130, 25);
@@ -102,6 +116,9 @@ public class Questions {
                 new addData();
             }
         });
+    }
+    public static void main(String args[]){
+        new Questions();
     }
 
 }

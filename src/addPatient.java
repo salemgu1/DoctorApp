@@ -40,6 +40,7 @@ public class addPatient extends JPanel implements ActionListener {
 
     public void startScreen() {
         JLabel l=new JLabel("Hello Doctor "+DoctorApp.userTextField.getText()+" Please Enter details for the patient");
+        l.setForeground(Color.BLUE);
         l.setBounds(10,30,400,30);
         frame1.setSize(600, 1000);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,6 +48,7 @@ public class addPatient extends JPanel implements ActionListener {
 
         JPanel panel = new JPanel(null);
         panel.setBorder(BorderFactory.createTitledBorder("Add Patient"));
+        panel.setBackground(Color.lightGray);
         panel.setBounds(50, 30, 500, 810);
 
 

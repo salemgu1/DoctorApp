@@ -1,14 +1,14 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
 
 public class DoctorApp extends JFrame implements ActionListener {
     // for login frame
     Container container = getContentPane();
+    JPanel pane =new JPanel();
+    JPanel pane1=new JPanel();
+     JLabel lab = new JLabel("Welcome to our software that offers the treatment Best suited for the patient!");
      JLabel userLabel = new JLabel("USERNAME");
     JLabel passwordLabel = new JLabel("PASSWORD");
     JLabel idLabel = new JLabel("ID");
@@ -19,6 +19,7 @@ public class DoctorApp extends JFrame implements ActionListener {
     JButton loginButton = new JButton("LOGIN");
     JButton resetButton = new JButton("RESET");
     JCheckBox showPassword = new JCheckBox("Show Password");
+    private Icon icon = new ImageIcon("2.jpeg");
 
 
 
@@ -38,6 +39,8 @@ public class DoctorApp extends JFrame implements ActionListener {
     }
 
     public void setLocationAndSize() {
+        lab.setForeground(Color.BLUE);
+        lab.setBounds(30,90,600,30);
         userLabel.setBounds(50, 150, 100, 30);
         passwordLabel.setBounds(50, 220, 100, 30);
         idLabel.setBounds(50, 290, 100, 30);
@@ -51,13 +54,18 @@ public class DoctorApp extends JFrame implements ActionListener {
     }
 
     public void addComponentsToContainer() {
+        pane.setBounds(50,110,300,30);
+        pane.setVisible(true);
 
         JPanel panel = new JPanel(null);
-//        panel.setBackground(Color.BLUE);
-        panel.setBorder(BorderFactory.createTitledBorder("Sign in Doctor"));
+        panel.setBackground(Color.lightGray);
+        JLabel a=new JLabel("Sign in Doctor");
+        a.setBackground(Color.GREEN);
+        panel.setBorder(BorderFactory.createTitledBorder(a.getText()));
+        panel.setForeground(Color.red);
         panel.setBounds(50, 50, 600, 600);
 
-
+        panel.add(lab);
         panel.add(userLabel);
         panel.add(passwordLabel);
         panel.add(userTextField);
@@ -68,6 +76,7 @@ public class DoctorApp extends JFrame implements ActionListener {
         panel.add(idLabel);
         panel.add(idTextField);
         container.add(panel);
+        container.add(pane);
     }
 
     public void addActionEvent() {
@@ -96,7 +105,6 @@ public class DoctorApp extends JFrame implements ActionListener {
             String ID1="221133";
             String ID2="221122";
 
-            //((userText.equalsIgnoreCase(User2) &&digUser2<=2&&User2.length()>=6&&User2.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&pas1.indexOf("!")!=-1&&pas1.indexOf("#")!=-1&&pas1.indexOf("$")!=-1&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID2)))
             if (((userText.equalsIgnoreCase(User1)&&digUser1<=2&&User1.length()>=6&&User1.length()<=8 && pwdText.equalsIgnoreCase(pas1)&&digpas1>0&&(pas1.indexOf("!")!=-1||pas1.indexOf("#")!=-1||pas1.indexOf("$")!=-1)&&charpas>0&&pas1.length()>=8&&pas1.length()<=10&&ID.equals(ID1)))) {
                 setVisible(false);
                 new BoxText();
@@ -157,7 +165,3 @@ class Login {
         frame.setResizable(false);
     }
 }
-
-
-
-
